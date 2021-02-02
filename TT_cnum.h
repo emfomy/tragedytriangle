@@ -1,0 +1,37 @@
+struct cnum {
+	float re;
+	float im;
+};
+
+struct cnum *init_cnum(float re, float im);
+int32_t c_print(struct cnum *A);
+int32_t c_print_s(float re, float im);
+struct cnum *c_copy(struct cnum *origin);
+struct cnum *c_0();
+struct cnum *c_add(struct cnum *A, struct cnum *B);
+struct cnum *c_add_s(struct cnum *x, float re, float im);
+struct cnum *c_sub(struct cnum *A, struct cnum *B);
+struct cnum *c_sub_sl(struct cnum *x, float re, float im);
+struct cnum *c_sub_sh(float re, float im, struct cnum *x);
+struct cnum *c_scalar(struct cnum *A, float x);
+struct cnum *c_conj(struct cnum *A);
+struct cnum *c_conj_s(float re, float im);
+struct cnum *c_mul(struct cnum *A, struct cnum *B);
+struct cnum *c_mul_f(struct cnum *A, struct cnum *B);
+struct cnum *c_mul_s(struct cnum *x, float re, float im);
+struct cnum *c_mul_sf(struct cnum *x, float re, float im);
+struct cnum *c_div(struct cnum *A, struct cnum *B);
+struct cnum *c_div_fh(struct cnum *A, struct cnum *B);
+struct cnum *c_div_fl(struct cnum *A, struct cnum *B);
+struct cnum *c_div_sl(struct cnum *x, float re, float im);
+struct cnum *c_div_slf(struct cnum *x, float re, float im);
+struct cnum *c_div_sh(float re, float im, struct cnum *x);
+struct cnum *c_div_shf(float re, float im, struct cnum *x);
+struct cnum *c_div1(struct cnum *x);
+struct cnum *c_div1_f(struct cnum *x);
+struct cnum *c_div1_s(float re, float im);
+float c_abs2(struct cnum *x);
+float c_abs2_s(float re, float im);
+int32_t c_equal(struct cnum *A, struct cnum *B);
+int32_t c_equal_s(struct cnum *x, float re, float im);
+int32_t c_equal0(struct cnum *x);
